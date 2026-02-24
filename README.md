@@ -1,64 +1,94 @@
-# AI-Powered Call Center (Inbound & Outbound)
+# AI-Powered Call Center
 
-## Pages & Features
+AI-driven inbound and outbound call center with smart routing and analytics.
 
-### 1. Dashboard
-- Live call volume & queue status
-- Average call duration & wait time
-- AI vs. human handled calls ratio
-- Call outcome breakdown (resolved, transferred, dropped)
-- Real-time agent availability
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
 
-### 2. Call Queue
-- Inbound call queue with caller info & reason
-- Priority ranking based on AI intent detection
-- Estimated wait time display
-- Auto-routing to AI agent or human agent
+## Tech Stack
 
-### 3. AI Voice Agent
-- Configure voice personas (tone, language, accent)
-- Conversation script builder with branching logic
-- Real-time speech-to-text transcription
-- Intent detection & dynamic response generation
-- DTMF (keypad) input handling
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
 
-### 4. Outbound Campaigns
-- Campaign builder (audience, script, schedule)
-- AI-powered auto-dialer
-- Call script with dynamic personalization
-- Voicemail drop automation
-- Campaign progress & conversion tracking
+## Getting Started
 
-### 5. Live Call Monitor
-- Real-time call listening & whispering
-- AI sentiment indicator during calls
-- Live transcription feed
-- Takeover controls for supervisors
+```bash
+npm install
+cp .env.example .env.local
+# Set VITE_CONVEX_URL to your deployment URL
+npm run dev
+```
 
-### 6. Call Recordings & Transcripts
-- Automatic call recording & storage
-- AI-generated call transcripts
-- Searchable transcript archive
-- Call summary & action items extraction
-- Compliance flagging
+## License
 
-### 7. IVR Builder
-- Visual IVR menu designer
-- Multi-level menu support
-- AI-enhanced natural language IVR
-- After-hours & holiday routing
+MIT © Mehdi Nabhani
 
-### 8. Analytics & Reports
-- Call volume trends (hourly / daily / monthly)
-- Resolution rate & escalation metrics
-- Agent performance scorecards
-- Sentiment analysis trends
-- Cost per call analysis
-- Export as PDF / CSV
+---
 
-### 9. Settings
-- Phone number & trunk configuration
-- Routing rules & ring groups
-- Business hours & holiday calendar
-- Call recording & retention policies
-- Integration settings (CRM, helpdesk)
+<details>
+<summary>📋 Original Feature Spec</summary>
+
+# {{APP_TITLE}}
+
+{{APP_DESCRIPTION}}
+
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
+
+## Tech Stack
+
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 22+
+- A running [shared Convex backend](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+
+### Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Create .env.local with your Convex URL
+cp .env.example .env.local
+# Edit .env.local and set VITE_CONVEX_URL to your deployment URL
+
+# Start the dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run typecheck` | Run TypeScript type checking |
+
+## Project Structure
+
+```
+src/
+  main.tsx              # Entry point with ConvexAuthProvider
+  App.tsx               # Auth routing (Landing vs Dashboard)
+  App.css               # Component styles
+  index.css             # Global styles & design tokens
+  components/
+    Landing.tsx          # Marketing/landing page
+    SignIn.tsx           # Auth form (sign-in/sign-up)
+    Dashboard.tsx        # Authenticated app shell
+api.ts                   # Convex API types (from shared backend)
+```
+
+## License
+
+MIT © Mehdi Nabhani
+
+</details>
